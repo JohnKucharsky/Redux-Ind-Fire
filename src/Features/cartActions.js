@@ -24,7 +24,7 @@ export const sendCartData = (cart) => {
     dispatch(uiActions.loadingStatus(true));
 
     const sendRequest = async () => {
-      const res = await fetch(
+      await fetch(
         "https://redux-fire-277c2-default-rtdb.firebaseio.com/cartItems.json",
         {
           method: "PUT",
