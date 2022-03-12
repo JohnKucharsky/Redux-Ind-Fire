@@ -13,10 +13,10 @@ function App() {
   const cart = useSelector((state) => state.cart);
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
   useEffect(() => {
     dispatch(sendCartData(cart));
-  }, [cart]);
+  }, [dispatch, cart]);
 
   return <div>{isLoggedIn ? <Layout /> : <Login />}</div>;
 }
